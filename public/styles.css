@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 48px 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 44px;
+  margin: 10px 0 8px;
+  letter-spacing: -1px;
+}
+
+h2 {
+  margin: 8px 0 18px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  color: #596579;
+  background: #e9edf5;
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+/* ------------------------------
+   Upload section
+------------------------------ */
+
+.upload-card,
+.card {
+  background: #fff;
+  border: 1px solid #e3e8f0;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 30px #1720330d;
+}
+
+.upload-card {
+  max-width: 720px;
+  margin: auto;
+}
+
+.dropzone {
+  border: 2px dashed #cbd4e1;
+  border-radius: 16px;
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 9px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.dropzone:hover {
+  border-color: #172033;
+  background: #fafbfe;
+}
+
+.dropzone input {
+  display: none;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+small {
+  color: #78859a;
+}
+
+/* ------------------------------
+   Buttons
+------------------------------ */
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 15px;
+  background: #172033;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  opacity: 0.92;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.secondary {
+  width: auto;
+  margin: 0;
+  background: #edf1f7;
+  color: #172033;
+}
+
+/* ------------------------------
+   Processing / status
+------------------------------ */
+
+#status {
+  margin-top: 12px;
+  text-align: center;
+  color: #596579;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+/* ------------------------------
+   Results
+------------------------------ */
+
+.hidden {
+  display: none;
+}
+
+.result {
+  margin-top: 35px;
+}
+
+.result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card {
+  margin-bottom: 16px;
+}
+
+.card h2 {
+  font-size: 20px;
+}
+
+/* ------------------------------
+   Overview
+------------------------------ */
+
+#overview {
+  color: #3c4759;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ------------------------------
+   Decisions / Risks
+------------------------------ */
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+li.empty-state {
+  list-style: none;
+  margin-left: -22px;
+}
+
+/* ------------------------------
+   Action Items
+------------------------------ */
+
+.action {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 90px;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.action:last-child {
+  border-bottom: 0;
+}
+
+.action strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.action span {
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.action .pill {
+  color: #172033;
+}
+
+/* ------------------------------
+   Priority pills
+------------------------------ */
+
+.pill {
+  background: #f0f3f8;
+  padding: 6px 9px;
+  border-radius: 8px;
+  font-size: 12px !important;
+  font-weight: 700;
+  text-align: center;
+  color: #596579 !important;
+}
+
+.pill.high {
+  background: #fdecec;
+  color: #b42318 !important;
+}
+
+.pill.medium {
+  background: #fff4db;
+  color: #9a6700 !important;
+}
+
+.pill.low {
+  background: #e9f7ef;
+  color: #18794e !important;
+}
+
+/* ------------------------------
+   Empty states
+------------------------------ */
+
+.empty-state {
+  color: #8a94a6;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+/* ------------------------------
+   Transcript
+------------------------------ */
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  font-family: inherit;
+  color: #3c4759;
+  font-size: 14px;
+  background: #f8f9fc;
+  border-radius: 12px;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+/* ------------------------------
+   Meeting history
+------------------------------ */
+
+.history {
+  margin-top: 40px;
+}
+
+.history-item {
+  background: #fff;
+  border: 1px solid #e3e8f0;
+  padding: 14px 18px;
+  border-radius: 12px;
+  margin: 9px 0;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.history-item:hover {
+  border-color: #b9c3d2;
+  transform: translateY(-1px);
+}
+
+.history-item strong {
+  font-size: 14px;
+  color: #172033;
+}
+
+.history-item span {
+  font-size: 12px;
+  color: #78859a;
+}
+
+/* ------------------------------
+   Mobile
+------------------------------ */
+
+@media (max-width: 700px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-head {
+    align-items: flex-start;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .result-head .secondary {
+    width: 100%;
+  }
+
+  .action {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .action strong {
+    grid-column: 1 / -1;
+  }
+
+  .action .pill {
+    justify-self: start;
+  }
+}

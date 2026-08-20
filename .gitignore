@@ -1,0 +1,9 @@
+node_modules/
+.env
+uploads/
+__pycache__/
+*.pyc
+data/meetings.json
+whisper/
+.venv/
+venv/

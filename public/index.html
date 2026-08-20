@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Meeting Summarizer</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <main class="container">
+
+    <header>
+      <div class="badge">AI PRODUCTIVITY TOOL</div>
+      <h1>Meeting Summarizer</h1>
+      <p>Upload a meeting recording and get a transcript, decisions, topics, and actionable tasks.</p>
+    </header>
+
+    <section class="upload-card">
+      <form id="form">
+        <label class="dropzone">
+          <input
+            id="audio"
+            name="audio"
+            type="file"
+            accept="audio/*,video/mp4"
+            required
+          >
+
+          <span class="icon">🎙️</span>
+
+          <strong id="fileName">
+            Choose a meeting recording
+          </strong>
+
+          <small>
+            MP3, WAV, M4A, WEBM or MP4 · max 100 MB
+          </small>
+        </label>
+
+        <button id="submit">
+          Transcribe & Summarize
+        </button>
+      </form>
+
+      <div id="status"></div>
+    </section>
+
+    <section id="result" class="result hidden">
+
+      <div class="result-head">
+        <div>
+          <div class="badge">MEETING OUTPUT</div>
+          <h2 id="meetingName"></h2>
+        </div>
+
+        <button id="copyBtn" class="secondary">
+          Copy Summary
+        </button>
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <h3>Overview</h3>
+          <p id="overview"></p>
+        </article>
+
+        <article class="card">
+          <h3>Important Topics</h3>
+          <ul id="topics"></ul>
+        </article>
+
+      </div>
+
+      <div class="grid">
+
+        <article class="card">
+          <h3>Key Decisions</h3>
+          <ul id="decisions"></ul>
+        </article>
+
+        <article class="card">
+          <h3>Risks & Blockers</h3>
+          <ul id="risks"></ul>
+        </article>
+
+      </div>
+
+      <article class="card">
+        <h3>Action Items</h3>
+        <div id="actions"></div>
+      </article>
+
+      <article class="card">
+        <h3>Transcript</h3>
+        <pre id="transcript"></pre>
+      </article>
+
+    </section>
+
+    <section class="history">
+      <h2>Previous Meetings</h2>
+      <div id="historyList"></div>
+    </section>
+
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
