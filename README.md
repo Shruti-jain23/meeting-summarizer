@@ -93,6 +93,3 @@ Overview / Decisions / Actions / Risks
 
 Use a database instead of JSON, add authentication, object storage, background jobs, speaker diarization, rate limiting, logging and a production deployment.
 
-## Demo
-
-Upload a 1–3 minute meeting recording. Show transcript → decisions → action items → risks → refresh and show saved meeting history.
