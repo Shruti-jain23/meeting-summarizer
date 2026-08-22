@@ -1,4 +1,4 @@
-```markdown
+
 # Meeting Summarizer
 
 An AI-powered meeting assistant that converts meeting recordings into transcripts and structured, action-oriented summaries.
@@ -159,5 +159,3 @@ http://localhost:3000
 
 - **Video Demo:** [Add demo video link]
 
-
-```
